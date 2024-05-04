@@ -12,7 +12,7 @@ import { AppInterceptor } from './interceptors/app.interceptor';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   // app.useGlobalGuards(new BookGuard());
-  app.useGlobalInterceptors(new AppInterceptor());
+  // app.useGlobalInterceptors(new AppInterceptor());
   app.use(globalMiddleWareOne);
   app.use(globalMiddleWareTwo);
   app.use(apiLogger);
